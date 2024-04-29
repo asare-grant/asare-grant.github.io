@@ -522,6 +522,9 @@ ul .fa-xmark{
 .about-section .made-by{
     font-size: 12px;
 }
+.made-by .fa-heart{
+    margin-right: 0px;
+}
 
 
 
