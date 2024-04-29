@@ -339,13 +339,13 @@ ul .fa-xmark{
         margin-bottom: 20px;
         position: relative;  
         cursor: pointer;
-        transition: transform 0.3s ease-in-out;  
+        transition: transform 0.3s;  
     }
     .my-image:nth-child(2){
-        animation-delay: 0.2s;
+        animation-delay: 0.1s;
     }
     .my-image:nth-child(3){
-        animation-delay: 0.4s;
+        animation-delay: 0.3s;
     }
 
     .my-element{
