@@ -7,3 +7,5 @@ It includes projects i am working on and updated as i learn new ways of making t
 finally uploaded on github
 
 the website will be up and running soon
+
+this is an update to READme
