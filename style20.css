@@ -1,0 +1,800 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.header{
+    width: 100%;
+    height: 100svh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images20/banner.png);
+    background-position: center;
+    background-size: cover;
+    padding: 50px 6%;
+    overflow: hidden;
+    position: relative;
+}
+.nav-menu{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.nav-menu .logo img{
+    width: 120px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.nav-menu .logo img:hover{
+    transform: scale(1.1);
+}
+.right-menu ul{
+    display: flex;
+}
+.right-menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    transition: 0.5s;
+}
+.right-menu ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: #f44336; 
+    transition: 0.5s;
+    
+}
+@keyframes underline{
+    0%{
+        position: absolute;
+        left: 0;
+        width: 50%;
+    }
+    30%{
+        position: absolute;
+        right: -50%;
+        width: 50%;
+    }
+    50%{
+       right: 0; 
+    }
+    70%{
+        position: unset;
+        width: 100%;
+    }
+}
+.right-menu ul li:hover::after{
+    width: 50%;  
+    animation: underline 1.5s linear forwards;
+}
+.right-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+.header-content{
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.header-content h1{
+    font-size: 50px;
+}
+.header-content p{
+    font-size: 13px;
+    margin: 30px 0 50px;
+}
+.btn{
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover{
+    background: #f44336;
+    border-color: #f44336;
+}
+ul .fa-xmark{
+    color: #fff;
+    display: none;
+}
+.show-more-menu .fa-bars{
+    color: #fff;
+    font-size: 25px;
+    display: none;
+}
+
+@media screen and (max-width: 700px){
+    .right-menu ul{
+        display: block;
+        background: #f44336;
+        width: 200px;
+        height: 100%;
+        z-index: 2;
+        top: 0;
+        right: -200px;
+        position: absolute;
+        padding: 50px 0 0 20px;
+    }
+    .right-menu ul li{
+        display: block;
+        margin-bottom: 10px;
+        padding: 3px 0;
+    }
+    ul .fa-xmark{
+        display: block;
+        right: 20px;
+        top: 20px;
+        position: absolute;
+    }
+    .show-more-menu .fa-bars{
+        display: block;
+        padding: 0;
+    }
+    .header-content h1{
+        font-size: 30px;
+    }
+    .header-content p{
+        font-size: 12px;
+        margin: 30px 0 50px;
+        word-break: unset;
+    }
+}
+
+/*------------------ Courses ------------*/
+
+.courses{
+    padding: 100px 6%;
+    font-family: "Lato", sans-serif;
+}
+.rows{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+.rows h1{
+    font-size: 35px;
+    margin-bottom: 30px;
+    
+}
+.rows p{
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 40px;
+}
+.rows .course-col{
+    display: flex;
+    text-align: center;
+    
+}
+.course-col .cols{
+    flex-basis: 32%;
+    margin: auto;
+    background-color: #fff3f3;
+    padding: 20px;
+}
+.course-col h3{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.course-col p{
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 700px){
+    .rows h1{
+        font-size: 30px;
+    }
+    .rows p{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .course-col{
+        display: flex;
+        flex-direction: column;
+    }
+    .course-col .cols{
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+/*--------------- Campus --------------*/
+
+.campus{
+    padding: 0px 6% 100px;
+    margin: auto;
+}
+.rows .campus-col{
+    display: flex;
+    text-align: center;
+}
+.campus-col .c-cols{
+    flex: 31%;
+    margin: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.c-cols img{
+    width: 100%;
+    border-radius: 10px;
+}
+.layer{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    transition: 0.5s;
+    overflow: hidden;
+    
+}
+.layer h3{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    color: #fff;
+    font-size: 22px;
+    transition: 0.3s;
+    transition: animation 0.5s;
+    
+}
+.layer:hover{
+    animation: animateHover 1.5s linear forwards;
+    background: #f44336;
+    
+}
+@keyframes animateHover{
+    0%{
+        background: rgba(244, 67, 54, 0.363);
+    }
+    20%{
+        background: #f44336d7;
+    }
+    40%{
+        background: transparent;
+    }
+    60%{
+        background: rgba(244, 67, 54, 0.2);
+    }
+    80%{
+        background: rgba(244, 67, 54, 0.5);
+    }
+    100%{
+        background: rgba(244, 67, 54, 0.8);
+    }
+}
+.layer:hover h3{
+    animation: title 1.5s linear forwards;
+}
+@keyframes title{
+    0%{
+        bottom: 43%;
+    }
+    20%{
+        bottom: 20%;
+    }
+    50%{
+        bottom: 60%;
+    }
+    80%{
+        bottom: 47%;
+    }
+    100%{
+        bottom: 40%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .rows .campus-col{
+        display: block;
+        text-align: center;
+    }
+    .campus-col .c-cols{
+        flex: 100%;
+        margin: 0 0 30px 0;
+    }
+        
+}
+
+
+/*------------- Our Facilities -------------*/
+
+.facilities{
+        padding: 0px 6% 100px;
+        margin: auto;
+    }
+    .rows .facilities-col{
+        display: flex;
+        text-align: left;
+        transition: all 0.5s ease;
+        
+    }
+    .facilities-col .f-col{
+        flex-basis: 31%;
+        margin: 0 auto; 
+    }
+    
+    .f-col .my-image{
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;  
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;  
+    }
+    .my-image:nth-child(2){
+        animation-delay: 0.2s;
+    }
+    .my-image:nth-child(3){
+        animation-delay: 0.4s;
+    }
+
+    .my-element{
+        transform: translate(0, 100px);
+        opacity: 0;
+    }
+    .activation{
+        animation: flow 1.5s linear forwards; 
+    }
+    .animate-from-right{
+        transform: translate(100px, 0);
+        opacity: 0;
+    }
+    .animate-from-left{
+        transform: translate(-100px, 0);
+        opacity: 0;
+    }
+    .animate-from-top{
+        transform: translate(0, -100px);
+        opacity: 0;
+    }
+    @keyframes flow{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0.5;
+        }       
+        100%{
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+   
+    .f-col h4{
+        margin-bottom: 15px;
+        font-size: 14px;
+        position: relative;
+        animation-delay: 0.2s;
+    }
+    .f-col p{
+        font-size: 12px;
+        text-align: left;
+        position: relative;
+        animation-delay: 0.6s;
+    }
+    @media screen and (max-width: 700px) {
+        .rows .facilities-col{
+            display: flex;
+            flex-direction: column;
+        }
+        .facilities-col .f-col{
+            flex-basis: 100%;
+    
+        }
+        
+    }
+
+    /*-------------- testimonials -----------*/
+
+    .testimonials{
+        padding: 0px 6% 100px;
+        margin: auto;
+    }
+    .rows .testimonials-col{
+        display: flex;
+        text-align: left;
+    }
+    .testimonials-col .t-cols{
+        flex-basis: 47%;
+        margin: 0 auto; 
+        display: flex;
+        align-items: flex-start;
+        background-color: #fff3f3;
+        padding: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .t-cols img{
+        width: 30px;
+        margin-right: 15px;
+        border-radius: 50%;
+    }
+    .t-cols p{
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .t-cols h4{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    .fa-star, .fa-regular{
+        font-size: 14px;
+        color: #f44336;
+    }
+
+    @media screen and (max-width: 700px) {
+        .testimonials .rows h1{
+            display: flex;
+            text-align: center;
+            margin-top: -20px;
+        }
+        .testimonials-col{
+            flex-direction: column;
+        }
+        .testimonials-col .t-cols{
+            flex-basis: 100%;
+            margin: 10px 0;    
+        }
+        .testimonials-col .t-cols p{
+            text-align: left;
+        }
+    }
+
+/*------------Enroll In Our Course----------*/
+
+.enrollment{
+    padding: 0px 7% 100px;
+    margin: auto;
+}
+
+.enroll-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images20/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    border-radius: 10px;
+    color: #fff;
+}
+.enroll-info h1{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.enroll-info a{
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    .enroll-info h1{
+        font-size: 24px;
+    }
+}
+
+
+/*------------About Us----------------*/
+
+.footer{
+    padding: 0px 7%;
+    margin: auto;
+   
+}
+.about-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.about-section p{
+    margin: 20px 0;
+    font-size: 12px;
+}
+.fa-brands{
+    margin-right: 10px;
+    color: #f44336;
+    font-size: 12px;
+}
+.about-section .made-by{
+    font-size: 12px;
+}
+
+
+
+/*------------------ About Page -------------------------*/
+
+
+
+.about-header{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images20/background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 50px 6%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.about-header-content{
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.about-header-content h1{
+    font-size: 30px;
+    margin-top: 100px;
+}
+.aboutUs{
+    padding: 120px 6%;
+    margin: auto;
+}
+.about-col{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+}
+.about-left-col{
+    flex-basis: 43%;
+    margin-right: 30px;
+}
+.about-left-col h1{
+    font-size: 30px;
+}
+.about-left-col p{
+    font-size: 12px;
+    margin: 30px 0;
+}
+.about-right-col{
+    flex-basis: 43%;
+}
+.about-right-col img{
+    width: 100%;
+}
+.abt-btn{
+    background: transparent;
+    color: #f44336;
+    border: 1px solid #f44336;
+}
+.abt-btn:hover{
+    background: #f44336;
+    color: #fff;
+}
+@media screen and (max-width: 700px){
+    .about-col{
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-left-col{
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .about-right-col{
+        flex-basis: 100%;
+    }
+}
+    
+
+/*--------------- Blog Page ------------------*/
+
+.blog-header-content{
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.blog-header-content h1{
+    font-size: 30px;
+    margin-top: 100px;
+}
+.blog-page-section{
+    padding: 100px 6%;
+}
+.blog-cols{
+    display: flex;
+    text-align: left;
+}
+.left-blog-col{
+    flex-basis: 65%;
+    margin-right: 30px;
+}
+.left-blog-col img{
+    width: 100%;
+}
+.left-blog-col h2{
+    font-size: 18px;
+    margin: 20px 0;
+    color: #222;
+}
+.left-blog-col p{
+    font-size: 13px;
+    color: #999;
+    
+}
+/*---------- Comment Form ----------*/
+
+.comment-form{
+    margin-top: 30px;
+    border: 1px solid #555;
+    padding: 0 20px;
+    
+}
+.form-field{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.form-field input, .form-field textarea{
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.form-field .btn{
+    align-self: flex-start;
+    margin: 10px 0;
+}
+.right-blog-col{
+    flex-basis: 32%;
+}
+.right-blog-col h2{
+    color: #fff;
+    background: #f44336;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+.categories{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #999;
+    padding: 10px;
+}
+@media screen and (max-width: 700px) {
+    .blog-header-content h1{
+        font-size: 24px;
+    }
+    .blog-cols{
+        display: block;
+    }
+    .left-blog-col{
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+    .right-blog-col{
+        flex-basis: 100%;
+        margin-top: 50px;
+    }
+}
+
+
+/***--------------Conatct Us Page ----------**/
+.contact-page{
+    padding: 100px 6%;
+}
+.contact-page iframe{
+    width: 100%;
+}
+.contact-page-col{
+    padding: 0px 6% 100px;
+    display: flex;
+}
+.contact-left-col{
+    flex-basis: 47%;
+    padding: 20px;
+    
+}
+.contact-left-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.contact-left-info .fa-solid,
+.fa-regular{
+    color: #f44336;
+    margin-right: 15px;
+    width: 24px;
+}
+.contact-left-info h5{
+    font-size: 14px;
+    font-weight: 400px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.contact-left-info p{
+    font-size: 12px;
+    color: #777;
+}
+
+.contact-right-col{
+    flex-basis: 47%;
+}
+.contact-form-field{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.contact-form-field input,
+.contact-form-field textarea{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 700px) {
+    .contact-page-col{
+        display: block;
+    }
+    .contact-left-col{
+        flex-basis: 100%;
+        margin-bottom: 40px;  
+    }
+    .contact-right-col{
+        flex-basis: 100%;
+    }
+}
+
+
+/* Set initial styling for the element */
+.my-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  /* Add a class to the element to trigger the animation */
+  .my-element.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website</title>
+    <link rel="stylesheet" href="style20.css">
+    <script src="https://kit.fontawesome.com/2477d86261.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="about-header">
+        <nav class="nav-menu">
+            <div class="logo">
+                <img src="images20/logo.png">
+            </div>
+            <div class="right-menu">
+                
+                <ul id="hideMenuLinks">
+                    <i class="fa-solid fa-xmark" id="hideLinks"></i>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about20.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>  
+                <div class="show-more-menu" id="showMenuLinks">
+                    <i class="fa-solid fa-bars"></i> 
+                </div>            
+            </div>
+        </nav>
+        <div class="about-header-content">
+            <h1>About Us</h1>
+        </div>
+    </header>
+
+    <!------------About Us----------------------->
+
+    <section class="aboutUs">
+        <div class="about-col">
+            <div class="about-left-col">
+                <h1>We are the world's largest university</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae provident nemo, ipsum mollitia ullam quisquam laborum natus obcaecati repellat! Nulla, quis ex quisquam sequi recusandae atque repudiandae iusto non voluptates? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus tempora labore quae sapiente dolores, aperiam non laudantium facilis fugiat alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. A, recusandae.</p>
+                <a href="" class="btn abt-btn">EXPLORE MORE</a>
+            </div>
+            <div class="about-right-col">
+                <img src="images20/about.jpg">
+            </div>
+        </div>
+    </section>
+
+   
+
+     <!-------- Footer Section ---------->
+
+     <section class="footer">
+         <div class="about-section">
+             <h4>About Us</h4>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum inventore modi reprehenderit atque mollitia nostrum amet saepe, labore quaerat sit.</p>
+             <div class="icon-class">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+             </div>
+             <p class="made-by">
+                 Made with <i class="fa-regular fa-heart"></i> <span id="mySpan"></span>
+             </p>
+         </div>
+     </section>
+    
+     
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+            const hideMenuLinks = document.getElementById("hideMenuLinks");
+            const showMenuLinks = document.getElementById("showMenuLinks");
+            const hideLinks = document.getElementById("hideLinks");
+
+            showMenuLinks.addEventListener("click", function(){
+                hideMenuLinks.style.right = "0%";
+            })
+
+            hideLinks.addEventListener("click", function(){
+                hideMenuLinks.style.right= "-100%";
+            })
+            
+    </script>
+    <script>
+
+        const typed = new Typed("#mySpan", {
+            strings: ["by Prince Asare-Grant", "to help you", "enroll now to start learning"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        })
+    </script>
+
+</body>
+</html>

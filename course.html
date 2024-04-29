@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website</title>
+    <link rel="stylesheet" href="style20.css">
+    <script src="https://kit.fontawesome.com/2477d86261.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="about-header">
+        <nav class="nav-menu">
+            <div class="logo">
+                <img src="images20/logo.png">
+            </div>
+            <div class="right-menu">
+                
+                <ul id="hideMenuLinks">
+                    <i class="fa-solid fa-xmark" id="hideLinks"></i>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about20.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>  
+                <div class="show-more-menu" id="showMenuLinks">
+                    <i class="fa-solid fa-bars"></i> 
+                </div>            
+            </div>
+        </nav>
+        <div class="about-header-content">
+            <h1>Our Courses</h1>
+        </div>
+    </header>
+
+    <!------------Our Courses----------------------->
+
+    <section class="courses">
+        <div class="rows">
+            <h1>Course We Offer</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, tempora!</p>
+            <div class="course-col">
+                <div class="cols">
+                    <h3>intermediate</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis sequi perferendis velit blanditiis eaque sint, odio dolore non voluptatum incidunt alias quam nemo quae nam cupiditate repudiandae dolor adipisci..</p>
+                </div>
+                <div class="cols">
+                    <h3>Degree</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis sequi perferendis velit blanditiis eaque sint, odio dolore non voluptatum incidunt alias quam nemo quae nam cupiditate repudiandae dolor adipisci..</p>
+                </div>
+                <div class="cols">
+                    <h3>Post Graduation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis sequi perferendis velit blanditiis eaque sint, odio dolore non voluptatum incidunt alias quam nemo quae nam cupiditate repudiandae dolor adipisci..</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!----------- Our Facilities--------->
+    <section class="facilities">
+        <div class="rows">
+            <h1>Our Facilities</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, nesciunt?</p>
+            <div class="facilities-col">
+                <div class="f-col">
+                    <img src="images20/library.png" class="my-image animate-from-right">
+                    <h4 class="myH4 animate-from-left">World Class Library</h4>
+                    <p class="myPara my-element">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, aliquam? Veritatis repellendus unde dolore maiores.</p>
+                </div>
+                <div class="f-col">
+                    <img src="images20/basketball.png" class="my-image animate-from-right">
+                    <h4 class="myH4 animate-from-left">Largest Play Ground</h4>
+                    <p class="myPara my-element">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, aliquam? Veritatis repellendus unde dolore maiores.</p>
+                </div>
+                <div class="f-col">
+                    <img src="images20/cafeteria.png" class="my-image animate-from-right">
+                    <h4 class="myH4 animate-from-left">Tasty and Healthy Food</h4>
+                    <p class="myPara my-element">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, aliquam? Veritatis repellendus unde dolore maiores.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+   
+
+     <!-------- Footer Section ---------->
+
+     <section class="footer">
+         <div class="about-section">
+             <h4>About Us</h4>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum inventore modi reprehenderit atque mollitia nostrum amet saepe, labore quaerat sit.</p>
+             <div class="icon-class">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+             </div>
+             <p class="made-by">
+                 Made with <i class="fa-regular fa-heart"></i> <span id="mySpan"></span>
+             </p>
+         </div>
+     </section>
+    
+     
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+            const hideMenuLinks = document.getElementById("hideMenuLinks");
+            const showMenuLinks = document.getElementById("showMenuLinks");
+            const hideLinks = document.getElementById("hideLinks");
+
+            showMenuLinks.addEventListener("click", function(){
+                hideMenuLinks.style.right = "0%";
+            })
+
+            hideLinks.addEventListener("click", function(){
+                hideMenuLinks.style.right= "-100%";
+            })
+            
+    </script>
+    <script>
+
+        const typed = new Typed("#mySpan", {
+            strings: ["by Prince Asare-Grant", "to help you", "enroll now to start learning"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        })
+    </script>
+
+    
+    <script>
+                    // Get the element to animate
+                const myElement = document.querySelectorAll('.my-element, .animate-from-right, .animate-from-left')
+
+                // Define the options for the Intersection Observer
+                const options = {
+                threshold: 0.5
+                };
+
+                // Create a new Intersection Observer
+                const observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                // If element is in viewport, add the 'show' class to trigger the animation
+                if (entry.isIntersecting) {
+                entry.target.classList.add('activation');
+                }
+                /* else {
+                entry.target.classList.remove('activation');
+                } */
+                });
+                }, options);
+
+                for (let i = 0; i < myElement.length; i++){
+                    let el = myElement[i];
+
+                    // Start observing the myElement
+                    observer.observe(el);
+                }
+
+
+
+
+</script>
+
+
+</body>
+</html>
